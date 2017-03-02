@@ -45,24 +45,19 @@
 
 						<div class="main_content">
 							<table name="table" cellspacing="0" cellpadding="0">
-								<tr>
-									<td class="leftcol">X:</td><td class="rightcol"><?php echo $_GET["x_field"]; ?></td>
-								</tr>
-								<tr>
-									<td class="leftcol">Y:</td><td class="rightcol"><?php echo $_GET["y_field"]; ?></td>
-								</tr>
-								<tr>
-									<td class="leftcol">R:</td><td class="rightcol"><?php echo $_GET["r_field"]; ?></td>
-								</tr>
-								<tr>
-									<td class="leftcol">Ответ:</td><td class="rightcol"><?php 
-										$answer = true;
-										$x = $_GET["x_field"];
-										$y = $_GET["y_field"];
-										$r = $_GET["r_field"];
-										$file = fopen("./bd.txt", "a+");
-										fwrite($file, "" . $x . "x" . $y . "x" . $r . "x");
-										//fclose($file);
+								<?php
+									$answer = true;
+									$x = $_GET["x_field"];
+									$y = $_GET["y_field"];
+									$r = $_GET["r_field"];
+									$file = fopen("bd.txt", "a+");
+									fwrite($file, "" . $x . "x" . $y . "x" . $r . "x" . "\n");
+									fclose($file);
+									$file = fopen("bd.txt", "r");
+									while (($line = fgets($handle)) !== false)
+									{
+										$arr = explode("x", $line, 100);
+										echo "<tr><td class=\"leftcol\">X:</td><td class=\"rightcol\">$arr[0]</td></tr><tr><td class=\"leftcol\">Y:</td><td class=\"rightcol\">$arr[1]</td></tr><tr><td class=\"leftcol\">R:</td><td class=\"rightcol\">$arr[2]</td></tr>";
 										if ($x >= 0 && $y >= 0) // first quadrant
 										{
 											$answer = false;
@@ -92,12 +87,11 @@
 											}
 										}
 										if ($answer)
-											echo "Принадлежит";
+											echo "<tr><td class=\"leftcol\">Ответ:</td><td class=\"rightcol\">Принадлежит</td></tr>";
 										else
-											echo "Не принадлежит";
-										?>
-									</td>
-								</tr>
+											echo "<tr><td class=\"leftcol\">Ответ:</td><td class=\"rightcol\">Не принадлежит</td></tr>";
+									}
+								?>
 							</table>
 						</div>
 
