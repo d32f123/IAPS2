@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>PHP script</title>
-	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
@@ -11,7 +11,7 @@
 		<div class="header">
 			<div class="logo">
 				<div class="logo_text">
-					<h1><a href="/">Лаба 1</a></h1>
+					<h1><a href="../..">Лаба 1</a></h1>
 					<h2>Нестеров Андрей, P3211</h2>
 					<h2>Вариант 3005</h2>
 				</div>
@@ -19,7 +19,7 @@
 
 			<div class="menubar">
 				<ul class="menu">
-					<li class="selected"><a href="/">Лаба 1</a></li>
+					<li class="selected"><a href="../..">Лаба 1</a></li>
 					<li><a href="#">Лаба 2</a></li>
 					<li><a href="#">Лаба 3</a></li>
 					<li><a href="#">Лаба 4</a></li>
@@ -35,7 +35,7 @@
 
 					<div class="films_block">
 						
-						<a href="#"><img src="/assets/img/areas.png" /></a>
+						<a href="#"><img src="../img/areas.png" /></a>
 
 					</div>
 
@@ -104,7 +104,7 @@
 		</div>
 		<div class="footer">
 				<p>
-					<a href="/">Лаба 1</a> |
+					<a href="../..">Лаба 1</a> |
 					<a href="#">Лаба 2</a> |
 					<a href="#">Лаба 3</a> |
 					<a href="#">Лаба 4</a>
