@@ -60,7 +60,7 @@
 										$x = $_GET["x_field"];
 										$y = $_GET["y_field"];
 										$r = $_GET["r_field"];
-										$file = fopen("./bd.txt", "a+");
+										$file = fopen('bd.txt', 'a+');
 										fwrite($file, "" . $x . "x" . $y . "x" . $r . "x");
 										//fclose($file);
 										if ($x >= 0 && $y >= 0) // first quadrant
