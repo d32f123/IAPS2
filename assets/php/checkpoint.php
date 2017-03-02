@@ -90,6 +90,7 @@
 											echo "<tr><td class=\"leftcol\">Ответ:</td><td class=\"rightcol\">Принадлежит</td></tr>";
 										else
 											echo "<tr><td class=\"leftcol\">Ответ:</td><td class=\"rightcol\">Не принадлежит</td></tr>";
+										echo "<hr>"
 									}
 								?>
 							</table>
